@@ -1,0 +1,77 @@
+page {
+  background-color: #eeeeee;
+}
+.collect_box .collect_hander {
+  height: 90rpx;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+}
+.collect_box .collect_hander view {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 90rpx;
+}
+.collect_box .phyletic_text {
+  padding: 20rpx;
+}
+.collect_box .phyletic_box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.collect_box .phyletic_box .phyletic_item {
+  background-color: #fff;
+  width: 200rpx;
+  height: 60rpx;
+  margin: 25rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 22rpx;
+}
+.collect_box .collect_input {
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+.collect_box .collect_input .input_text {
+  height: 500rpx;
+}
+.collect_box .collect_input .input_text textarea {
+  width: 100%;
+  font-size: 30rpx;
+}
+.collect_box .collect_input .input_img {
+  display: flex;
+}
+.collect_box .collect_input .input_img button {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 0;
+}
+.collect_box .collect_input .input_img .current_img_box {
+  width: 100%;
+  display: flex;
+}
+.collect_box .collect_input .input_img .current_img_box .current_img {
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 20rpx;
+}
+.collect_box .collect_input .input_img .current_img_box .current_img image {
+  width: 100%;
+  height: 100%;
+}
+.collect_box .collect_input .input_img .current_img_box .current_img .clear_img {
+  position: relative;
+  bottom: 140rpx;
+  left: 76rpx;
+}
+.collect_box .collect_input .submit {
+  position: relative;
+  top: 89rpx;
+  left: 184rpx;
+}
+.active {
+  border-bottom: 1rpx solid red;
+}

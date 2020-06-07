@@ -1,0 +1,48 @@
+<view class="collect_box">
+ <!-- 头部 -->
+ <view class="collect_hander">
+ <view class="active">体验问题</view>
+ </view>
+  <!-- 问题总类 -->
+ <view class="phyletic_text">问题的种类</view>
+ <!-- 选中种类 -->
+ <view class="phyletic_box">
+     <view class="phyletic_item">功能建议</view>
+     <view class="phyletic_item">购买中遇到的问题</view>
+     <view class="phyletic_item">性能问题</view>
+     <view class="phyletic_item">其他</view>
+ </view>
+<!-- -文本域 -->
+<view class="collect_input">
+<view class="input_text">
+     <textarea  value="{{inputValue}}" bindinput="inputValue" placeholder="请描述一哈您的问题" ></textarea>
+</view>
+  
+ <!-- 上传图片 -->
+ <view class="input_img">
+    <button  size="mini"  bindtap="handImgClick">+</button>
+
+    <!-- 展示图片 -->
+    <view class="current_img_box">
+    <view class="current_img" 
+    wx:for="{{ImageDataList}}"
+    wx:key="*this"
+    >
+    <image  src="{{item}}"  />
+    <view class="clear_img" bindtap="handRemClick" data-index="{{index}}"><icon type="clear" ></icon></view>
+    </view>
+    </view>
+      
+
+ </view>
+
+
+ <!-- 提交按钮 -->
+ <button class="submit" bindtap="handSubmit">提交</button>
+</view>
+
+
+
+
+
+</view>

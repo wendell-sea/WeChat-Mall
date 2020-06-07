@@ -1,0 +1,21 @@
+ <view class="search_box">
+ <!-- 头部搜索栏 -->
+<input value="{{value}}" placeholder="请输入您需要的内容" bindinput="inputChang" > </input>
+<button size="mini" hidden="{{!isHidden}}" bindtap="handButtonClaer">取消</button>
+</view>
+
+<!-- 显示内容 -->
+<view class="search_conten">
+ <navigator class="conten_item active_item" 
+ wx:for="{{searchData}}"
+ wx:key="index"
+ url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+ >
+{{item.goods_name}}
+ </navigator>
+</view>
+  
+
+       
+
+  

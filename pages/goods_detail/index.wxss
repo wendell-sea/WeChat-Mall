@@ -1,0 +1,110 @@
+page {
+  margin-bottom: 90rpx;
+}
+.deatil_img swiper {
+  height: 60vw;
+  text-align: center;
+}
+.deatil_img swiper image {
+  width: 60%;
+}
+.deatil_price {
+  color: red;
+  font-size: 32rpx;
+  padding: 20rpx 20rpx;
+  font-weight: 700;
+}
+.deatil_title {
+  display: flex;
+  padding: 10rpx 10rpx;
+  justify-content: space-between;
+  border-bottom: 10rpx solid #cccccc;
+}
+.deatil_title .left {
+  flex: 4;
+  border-right: 1px solid #cccccc;
+  padding: 0 5rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.deatil_title .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.deatil_text {
+  color: red;
+  font-size: 32rpx;
+  font-weight: 700;
+  padding: 20rpx 20rpx;
+  border-bottom: 4rpx solid #ccc;
+}
+.deatil_tool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1rpx solid #ccc;
+}
+.deatil_tool .tool_left {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+.deatil_tool .tool_left .left_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #1e1e1e;
+  font-size: 24rpx;
+  position: relative;
+}
+.deatil_tool .tool_left .left_item button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.deatil_tool .tool_right {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.deatil_tool .tool_right .add_cart {
+  flex: 1;
+  height: 100%;
+  background-color: #ffb224;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+}
+.deatil_tool .tool_right .buy {
+  flex: 1;
+  height: 100%;
+  background-color: #eb4450;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+}
+.isActiev{
+  color: red;
+}

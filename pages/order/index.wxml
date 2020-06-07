@@ -1,0 +1,29 @@
+
+<!-- 头部 选择标签 -->
+<view class="order_hander">
+<view class="active">全部</view>
+<view>待付款</view>
+<view>待发货</view>
+<view>退款/退货</view>
+</view>
+<!-- 订单信息 -->
+<view class="order_info"
+wx:for="{{orderList}}"
+wx:key="index"
+>  
+<view class="info_item">
+<view>订单编号</view>
+<view class="item_num">{{item.number}}</view>
+</view>
+<view class="info_item">
+<view>订单价格</view>
+<view class="item_price">￥{{item.goods_price}}</view>
+</view>
+
+<view class="info_item">
+<view>订单日期</view>
+<view class="item_date">{{item.date}}</view>
+</view>
+</view>
+  
+

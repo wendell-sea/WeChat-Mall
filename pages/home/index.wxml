@@ -1,0 +1,64 @@
+<view class="mall-index">
+<!-- 搜索 -->
+    <search-com/>
+<!-- 轮播 -->
+<view class="index-swiper">
+    <swiper autoplay circular indicator-dots>
+    <swiper-item 
+    wx:for="{{swiperData}}" 
+    wx:key="goods_id" widthFix>
+       <navigator url="/pages/goods_detail/index?goods_id=17928">
+       <image mode="widthFix" src="{{item.image_src}}" />
+        </navigator>
+    </swiper-item>
+    </swiper>
+</view>
+<!-- 分类导航 -->
+<view class="index-classfiy">
+    <navigator
+    wx:for="{{catesData}}"
+    wx:key="index"
+    class="classfiy_nav"
+    url="/pages/category/index"
+    open-type="switchTab"
+    >
+     <image  class="classfiy_img" mode="widthFix" src="{{item.image_src}}" />
+    </navigator>
+</view>
+  <!-- 首页楼层 -->
+ <view class="index-floor"> 
+      <view class="floor-group"
+      wx:for="{{floorData}}"
+      wx:for-item="item1"
+      wx:key="name"
+      >
+      <!-- 标题 -->
+      <view class="floor_title">
+        <image  mode="widthFix" src="{{item1.floor_title.image_src}}"  />
+      </view>
+
+       <!-- 内容 -->
+      <view class="product_list">
+      <navigator
+        wx:for="{{item1.product_list}}"
+        wx:for-item ="item2"
+        wx:for-index = "index2"
+        wx:key="name"
+        url="/pages/goods_list/index?{{item2.name}}">
+      >
+      <image mode="{{index2 === 0 ? 'widthFix' : 'scaleToFill'}}" src="{{item2.image_src}}" />
+      </navigator>
+       </view>
+
+
+      </view>
+
+
+        
+ </view>
+
+    
+</view>
+  
+
+  

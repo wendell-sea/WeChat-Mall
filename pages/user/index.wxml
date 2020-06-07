@@ -1,0 +1,102 @@
+
+
+
+
+  
+<!-- 用户登录才显示 -->
+<block wx:if="{{userInfo.nickName}}">
+<view class="user_box">
+<!-- 头像信息 -->
+<view class="user_img">
+<!-- 模糊背景 -->
+<view class="img_big">
+ <image src="{{userInfo.avatarUrl}}"  ></image>
+</view>
+<!-- 头像 -->
+<view class="img_small">
+ <image src="{{userInfo.avatarUrl}}" ></image>
+ <view>{{userInfo.nickName}}</view>
+ </view>
+</view>
+<!-- 收藏栏 -->
+<view class="user_collected">
+    <view class="collected_item"> 
+     <view class="item_num">0</view>
+     <view>收藏的店铺</view>
+    </view>
+    <navigator url="/pages/collectNum/index" class="collected_item"> 
+     <view class="item_num">{{collNum}}</view>
+     <view>收藏的商品</view>
+    </navigator>
+    <view class="collected_item"> 
+     <view class="item_num">0</view>
+     <view>关注的商品</view>
+    </view>
+    <view class="collected_item"> 
+     <view class="item_num">0</view>
+     <view>我的足迹</view>
+    </view>
+</view>
+<!-- 我的订单 -->
+<view class="user_order">
+<view class="order_title">
+<view>我的订单</view>
+</view>
+<view class="order_style">
+    <navigator url="/pages/order/index" class="order_item"> 
+     <view class="iconfont icon-quanbudingdan"></view>
+     <view>全部订单</view>
+    </navigator>
+    <view class="order_item"> 
+     <view class="iconfont icon-weibiaoti2fuzhi04"></view>
+     <view>待付款</view>
+    </view>
+    <view class="order_item"> 
+     <view class="iconfont icon-daishouhuo"></view>
+     <view>待收货</view>
+    </view>
+    <view class="order_item"> 
+     <view class="iconfont icon-tuikuantuihuo"></view>
+     <view>退款/退货</view>
+    </view>
+</view>
+</view>
+<!-- 收货地址管理-->
+<view class="user_address">
+<view>收货地址管理</view>
+<view class="iconfont icon-z043"></view>
+</view>
+<!-- 联系客服 -->
+<view class="user_address">
+<view>联系客服</view>
+<view>400-618-4000</view>
+</view>
+<!-- 意见反馈 -->
+<navigator url="/pages/collect/index" class="user_address" >
+<view>意见反馈</view>
+<view class="iconfont icon-z043"></view>
+</navigator>
+<!-- 关于我们 -->
+<view class="user_address">
+<view>关于我们</view>
+<view class="iconfont icon-z043"></view>
+</view>
+<!-- 分享应用 -->
+<view class="user_address eventual">
+<view>分享应用</view>
+<view class="iconfont icon-z043"></view>
+ </view>
+</view>
+</block>
+
+
+
+  <!-- 如果用户没有登录就显示 这里的内容 -->
+<block wx:else>
+<view class="user_nologin">
+<image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1122901560,2167626148&fm=26&gp=0.jpg"/>
+<button class="login" open-type="getUserInfo" bindgetuserinfo="handBindgetuserinfo">点击登录</button>
+</view>
+</block>
+
+

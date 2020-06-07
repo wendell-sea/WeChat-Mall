@@ -1,0 +1,61 @@
+<!-- 获取收货地址 -->
+<view class="address_row">
+    <!-- 收货地址 -->
+     <!-- 右侧盒子 -->
+     <view class="address_box">
+      <view class="address_left">
+          <view>收货人:{{address.userName}}</view>
+          <view>{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+      </view>
+     <!-- 左侧盒子 -->
+
+    <view class="address_right">
+          {{address.telNumber}}
+      </view>
+     </view>
+</view>
+
+
+<!-- 购物车内容 -->
+<!-- 标题 -->
+<view class="cart_title">购物车</view>
+<!-- 如果购物车有数据就显示 数据 -->
+   <!-- 商品 -->
+   <view class="cart_com_box" 
+   wx:for="{{cart}}"
+   wx:key="cat_id"
+   >
+   <view class="com_left">
+   <checkbox-group bindchange="handChangeClick" data-id="{{item.   goods_id}}">
+   <checkbox checked="{{item.checked}}"></checkbox>
+   </checkbox-group>
+   </view>
+   <view class="com_img">
+   <image  src="{{item.goods_big_logo}}" mode="widthFix" />
+   </view>
+   <view class="com_right">
+   <view class="com_right_top">{{item.goods_name}}</view>
+   <view class="com_right_bot">
+   <view class="right_bot_price">￥{{item.goods_price}}</view>
+   <view class="right_bot_num">
+   <view class="number">× {{item.num}}</view>
+   </view>
+   </view>
+   </view>  
+   </view>
+    
+
+<!-- 底部工具栏 -->
+<view  class="cart_tool">
+    <view class="tool_centner">
+        <view class="centner_price">合计:<text>￥{{allPrice}}</text></view>
+        <view class="centner_include">包含运费</view>
+    </view>
+
+    <view class="tool_right" bindtap="handPayPage" >
+        支付({{allNum}})
+    </view>
+      
+      
+      
+</view>

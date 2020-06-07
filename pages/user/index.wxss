@@ -1,0 +1,90 @@
+.user_box {
+  position: relative;
+}
+.user_box .user_img .img_big {
+  width: 100%;
+  height: 400rpx;
+  filter: blur(5px);
+}
+.user_box .user_img image {
+  width: 100%;
+  height: 100%;
+}
+.user_box .user_img .img_small {
+  position: absolute;
+  top: 150rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150rpx;
+  height: 150rpx;
+}
+.user_box .user_img .img_small image {
+  border-radius: 70%;
+}
+.user_box .user_img .img_small view {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 20rpx;
+}
+.user_box .user_collected {
+  position: relative;
+  top: -20rpx;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  margin: auto;
+}
+.user_box .user_collected .collected_item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.user_box .user_collected .collected_item .item_num {
+  color: red;
+}
+.user_box .user_order .order_title {
+  height: 70rpx;
+  line-height: 60rpx;
+  width: 95%;
+  margin: auto;
+  background-color: #ffffff;
+  border-bottom: 1rpx solid #cccccc;
+}
+.user_box .user_order .order_title view {
+  margin-left: 20rpx;
+}
+.user_box .user_order .order_style {
+  margin-top: 30rpx;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  margin: auto;
+}
+.user_box .user_order .order_style .order_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user_box .user_order .order_style .order_item .iconfont {
+  color: red;
+}
+.user_box .user_address {
+  height: 90rpx;
+  background-color: #fff;
+  width: 95%;
+  margin: 20rpx auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.user_box .user_address .eventual {
+  margin-top: 20rpx;
+}

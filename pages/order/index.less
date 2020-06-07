@@ -1,0 +1,36 @@
+ .order_hander{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 90rpx;
+      view{
+          text-align: center;
+          line-height: 90rpx;
+          height: 100%;
+          width: 100%;
+          border-bottom: 1rpx  solid #cccccc;
+      }
+      .active{
+          border-bottom: 1rpx solid red;
+      }
+      
+    }
+.order_info{
+    border-bottom: 1rpx solid #cccccc;
+   .info_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 20rpx;
+    .item_num{
+        color: #ccc;
+    }
+    .item_price{
+        color: red;
+        font-size: 30rpx;
+    }
+    .item_date{
+        color: #333;
+    }
+   } 
+}

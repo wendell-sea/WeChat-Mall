@@ -1,0 +1,16 @@
+.seach-input {
+    background-color: var(--themeColor);
+    height: 90rpx;
+    padding: 10rpx;
+    width: 100%;
+}
+
+navigator {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 15rpx;
+    color: #ccc;
+}

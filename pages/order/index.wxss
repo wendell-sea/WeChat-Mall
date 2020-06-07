@@ -1,0 +1,35 @@
+.order_hander {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90rpx;
+}
+.order_hander view {
+  text-align: center;
+  line-height: 90rpx;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1rpx solid #cccccc;
+}
+.order_hander .active {
+  border-bottom: 1rpx solid red;
+}
+.order_info {
+  border-bottom: 1rpx solid #cccccc;
+}
+.order_info .info_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 20rpx;
+}
+.order_info .info_item .item_num {
+  color: #ccc;
+}
+.order_info .info_item .item_price {
+  color: red;
+  font-size: 30rpx;
+}
+.order_info .info_item .item_date {
+  color: #333;
+}

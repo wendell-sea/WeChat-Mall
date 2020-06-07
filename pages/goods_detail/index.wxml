@@ -1,0 +1,59 @@
+<view class="goods_deatil">
+<!-- 轮播图 -->
+ <view class="deatil_img">
+     <swiper indicator-dots autoplay circular>
+         <swiper-item
+         wx:for="{{goodsObj.pics}}"
+         wx:key="pics_id"
+         bindtap="handImgClick"
+         data-url="{{item.pics_mid}}"
+         >
+             <image mode="widthFix"  src="{{item.pics_mid}}" />
+         </swiper-item>
+     </swiper>
+ </view>
+<!-- 价格 -->
+<view class="deatil_price">￥{{goodsObj.goods_price}}</view>
+<!-- 标题 -->
+<view class="deatil_title">
+<view class="left">{{goodsObj.goods_name}}</view>
+<view class="right"  bindtap="handCollClick" >
+<view class="iconfont icon-shoucang {{!collectState ? '' : 'isActiev'}}"></view>
+<view>收藏</view>
+</view>
+</view>
+<!-- 图文详情 -->
+<view class="deatil_text">图文详情</view>
+<rich-text  nodes="{{goodsObj.goods_introduce}}"></rich-text>
+<!-- 底部工具栏 -->
+
+<view class="deatil_tool">
+ <view class="tool_left">
+
+ <view class="left_item">
+ <view class="iconfont icon-kefu"></view>
+ <view>联系客服</view>
+ <button open-type="contact" ></button>
+ </view>
+
+ <view class="left_item">
+<view class="iconfont icon-fenxiang"></view>
+ <view> 分享</view>
+  <button open-type="share" ></button>
+</view>
+
+<navigator class="left_item" open-type="switchTab" url="/pages/cart/index">
+<view class="iconfont icon-gouwuche"></view>
+ <view>购物车</view>
+</navigator>
+    
+ </view>
+ <view class="tool_right">
+ <view class="add_cart" bindtap="handAddCartClick">加入购物车</view>
+ <view class="buy">立即购买</view>
+ </view>
+</view>
+  
+
+</view>
+  

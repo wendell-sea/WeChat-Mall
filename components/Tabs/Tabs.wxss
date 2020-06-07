@@ -1,0 +1,16 @@
+.tabs{
+  height: 88rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tabs_item{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 33.33%;
+}
+.active{
+  color: #eb4450;
+  border-bottom: 2rpx solid #eb4450
+}

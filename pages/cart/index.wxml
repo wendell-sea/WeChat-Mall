@@ -1,0 +1,84 @@
+<!-- 获取收货地址 -->
+<view class="address_row">
+    <!-- 获取收货地址按钮 -->
+    <view class="address_btn" wx:if="{{!address.userName}}">
+        <button type="primary" plain bindtap="handAddressClick">获取收货地址</button>  
+    </view>
+    <!-- 收货地址 -->
+    <view wx:else class="address_box">
+     <!-- 右侧盒子 -->
+      <view class="address_left">
+          <view>收货人:{{address.userName}}</view>
+          <view>{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+      </view>
+     <!-- 左侧盒子 -->
+    <view class="address_right">
+          {{address.telNumber}}
+      </view>
+    </view>
+
+</view>
+<!-- 购物车内容 -->
+<!-- 标题 -->
+<view class="cart_title">购物车</view>
+<!-- 如果购物车有数据就显示 数据 -->
+<block wx:if="{{cart.length !== 0}}">
+   <!-- 商品 -->
+   <view class="cart_com_box" 
+   wx:for="{{cart}}"
+   wx:key="cat_id"
+   >
+   <view class="com_left">
+   <checkbox-group bindchange="handChangeClick" data-id="{{item.   goods_id}}">
+   <checkbox checked="{{item.checked}}"></checkbox>
+   </checkbox-group>
+   </view>
+   <view class="com_img">
+   <image  src="{{item.goods_big_logo}}" mode="widthFix" />
+   </view>
+   <view class="com_right">
+   <view class="com_right_top">{{item.goods_name}}</view>
+   <view class="com_right_bot">
+   <view class="right_bot_price">￥{{item.goods_price}}</view>
+   <view class="right_bot_num">
+   <view bindtap="handClickEdit" data-id="{{item.goods_id}}"    data-operation="{{-1}}" >-</view>
+   <view class="number">{{item.num}}</view>
+   <view bindtap="handClickEdit" data-id="{{item.goods_id}}"    data-operation="{{1}}" >+</view>
+   </view>
+   <view class="com_dellet" bindtap="handClidkDelet" data-id="{   {item.goods_id}}">删除</view>
+   </view>
+   </view>  
+   </view>
+</block>
+<!-- 否则就显示这张图片 -->
+<block wx:else>
+ <image class="cart_null_show" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=414958469,2308531002&fm=15&gp=0.jpg" mode="widthFix" />
+   
+</block>
+    
+
+
+
+<!-- 底部工具栏 -->
+<view  class="cart_tool">
+    <view class="tool_left">
+         <checkbox-group bindchange="handAllChecked" >
+             <checkbox checked="{{allChecked}}">全选</checkbox>
+         </checkbox-group>
+    </view>
+
+    <view class="tool_centner">
+        <view class="centner_price">合计:<text>￥{{allPrice}}</text></view>
+        <view class="centner_include">包含运费</view>
+    </view>
+
+    <view class="tool_right" bindtap="handPaly" >
+        结算({{allNum}})
+    </view>
+      
+      
+      
+</view>
+  
+  
+  
